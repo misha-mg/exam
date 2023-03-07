@@ -1,0 +1,145 @@
+/* 
+grey #BFBFBF
+dark grey #4C5958
+pill green #8AA6A3
+dark green #10403B
+green #127369
+ */
+@import url('https://fonts.googleapis.com/css2? family= Comfortaa:wght@300;400;500;600;700 & display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #127369;
+    font-family: 'Comfortaa', cursive;
+        overflow: hidden;
+
+}
+body {
+    background-color: #BFBFBF;
+    display: flex;
+    justify-content: start;
+}
+
+ .scene{
+    background-color: #BFBFBF;
+    height: 750px;
+    width: 700px;
+    padding-top: 30px;
+ }
+.scene h1, h2{
+    text-align: center;
+}
+.scene__heading{
+    margin-bottom: 100px;
+}
+.scene__heading h2 span{
+    color: #10403B;
+}
+.scene__body {
+    width: 315px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: solid 3px #4C5958;
+
+}
+
+
+.scene__body-plate {
+    height: 100px;
+    width: 100px;
+    border: solid 3px #4C5958;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ПРОРИСОВКА КРЕСТИКА */
+
+
+.plate-x {
+    display: none;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.x {
+    transition: all 2s;
+}
+.x::before{
+    content: "";
+    position: absolute;
+    background-color: #41BF9B;
+    width: 100%;
+    height: 10px;
+    border-radius: 3px;
+    left: 0;
+    top: 35px;
+    transform: rotate(45deg);
+}
+.x::after{
+    content: "";
+    position: absolute;
+    background-color: #41BF9B;
+    width: 100%;
+    height: 10px;
+    border-radius: 3px;
+    left: 0;
+    top: 35px;
+    transform: rotate(-45deg);
+}
+
+
+
+/* ПРОРИСОВКА НОЛИКА */
+
+.plate-o {
+    display: none;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: solid 10px red;
+    border-radius: 100%;
+}
+.o {
+
+}
+
+
+
+.modal-wrapper{
+    display: none;
+}
+.modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    background-color: #4c5958ef;
+}
+.pop-up {
+    height: 200px;
+    width: 400px;
+    background-color: #8AA6A3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+    border: solid 5px #4C5958;
+    border-radius: 20px;
+}
+.pop-up h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+}
